@@ -1,4 +1,4 @@
-package Exercise;
+package ExerciseDemoOOP;
 
 public class Vehicle {
     //Attributes
