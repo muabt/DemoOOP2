@@ -5,10 +5,11 @@ public class MainPSS {
         Person p = new Person("Mua", "OneMount");
         System.out.println(p.toString());
 
-        Student s = new Student("Dai hoc",2003, 3.5);
-        System.out.println(s.toString() + s.getProgram() + 2003 + s.getFee());
+        Student s = new Student("Lam", "Ha Noi", "Mam non", 2016, 8.0);
+        System.out.println(s.toString());
 
-      /*  Staff sf = new Staff("Vinschool", 50.5);
-        System.out.println(sf.toString() + sf.getSchool() + sf.getPay());*/
+
+        Staff sf = new Staff("Bach", "Bac Ninh", "Vinschool", 50.5);
+        System.out.println(sf.toString());
     }
 }
