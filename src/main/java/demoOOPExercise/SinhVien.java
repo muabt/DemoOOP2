@@ -1,4 +1,4 @@
-package ExerciseDemoOOP;
+package demoOOPExercise;
 
 public class SinhVien {
         //Attributes private

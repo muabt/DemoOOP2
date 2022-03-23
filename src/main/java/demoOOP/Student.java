@@ -1,4 +1,4 @@
-package Buoi4;
+package demoOOP;
 
 public class Student {
     //Thuộc tinh

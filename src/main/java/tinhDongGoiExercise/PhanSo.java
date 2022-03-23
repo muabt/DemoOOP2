@@ -1,4 +1,4 @@
-package ExerciseTinhDongGoi;
+package tinhDongGoiExercise;
 
 public class PhanSo {
     private int tuSo;

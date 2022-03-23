@@ -1,4 +1,4 @@
-package ExerciseTinhDongGoi;
+package tinhDongGoiExercise;
 
 public class MainPS {
     public static void main(String[] args) {
@@ -9,6 +9,6 @@ public class MainPS {
         ps1.truPS(ps2);
         ps1.nhanPS(ps2);
         ps1.chiaPS(ps2);
-        
+
     }
 }

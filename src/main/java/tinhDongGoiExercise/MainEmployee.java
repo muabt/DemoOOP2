@@ -1,4 +1,4 @@
-package ExerciseTinhDongGoi;
+package tinhDongGoiExercise;
 
 public class MainEmployee {
     public static void main(String[] args) {
