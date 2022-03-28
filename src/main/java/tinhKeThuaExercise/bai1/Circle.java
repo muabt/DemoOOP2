@@ -1,8 +1,8 @@
-package tinhKeThuaExercise;
+package tinhKeThuaExercise.bai1;
 
 public class Circle{
-    private double radius;
-    private String color;
+    private double radius =1.0;
+    private String color = "red";
 
     public Circle() {
     }
@@ -36,10 +36,9 @@ public class Circle{
 
     @Override
     public String toString() {
-        return "Cylinder{" +
+        return "Cylinder[" +
                 "radius=" + radius +
                 ", color='" + color + '\'' +
-                ", Area='" + getArea() + '\'' +
-                '}';
+                ']';
     }
 }

@@ -1,4 +1,4 @@
-package tinhKeThuaExercise;
+package tinhKeThuaExercise.bai2;
 
 public class Person {
     private String name;
@@ -26,8 +26,9 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person: " +
+        return "Person[ " +
                 "name='" + name + '\'' +
-                ", address='" + address + '\'';
+                ", address='" + address + '\'' +
+                ']';
     }
 }

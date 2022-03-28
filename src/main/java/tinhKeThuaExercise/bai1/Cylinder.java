@@ -1,7 +1,9 @@
-package tinhKeThuaExercise;
+package tinhKeThuaExercise.bai1;
 
-public class Cylinder extends Circle{
-    private double height;
+import tinhKeThuaExercise.bai1.Circle;
+
+public class Cylinder extends Circle {
+    private double height = 1.0;
 
     public Cylinder() {
         super();
@@ -27,10 +29,9 @@ public class Cylinder extends Circle{
     public void setHeight(double height) {
         this.height = height;
     }
+
     public double getVolume(){
-        double radius = getRadius();
-        double volume = Math.PI*radius*radius*height;
-        return volume;
+        return super.getArea()*height;
     }
 
 }

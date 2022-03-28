@@ -1,12 +1,11 @@
-package tinhKeThuaExercise;
+package tinhKeThuaExercise.bai2;
 
-public class Student extends Person{
+import tinhKeThuaExercise.bai2.Person;
+
+public class Student extends Person {
     private String program;
     private int year;
     private double fee;
-
-    public Student(String dai_hoc, int i, double v) {
-    }
 
     public Student(String name, String address, String program, int year, double fee) {
         super(name, address);
@@ -37,10 +36,11 @@ public class Student extends Person{
 
     @Override
     public String toString() {
-        return "Student: " +
-                "name='" +super.toString() +
-                "program='" + program + '\'' +
+        return "Student[ " +
+                super.toString() +
+                ", program='" + program + '\'' +
                 ", year=" + year +
-                ", fee=" + fee;
+                ", fee=" + fee +
+                ']';
     }
 }
