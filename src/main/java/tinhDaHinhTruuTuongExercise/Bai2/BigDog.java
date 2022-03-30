@@ -7,7 +7,7 @@ public class BigDog extends Dog{
 
     @Override
     public void greets() {
-        super.greets();
+       //super.greets();
         System.out.println("Wooow");
 
     }

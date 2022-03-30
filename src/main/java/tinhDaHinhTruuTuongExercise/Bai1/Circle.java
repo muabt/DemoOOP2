@@ -1,12 +1,14 @@
 package tinhDaHinhTruuTuongExercise.Bai1;
 
 public class Circle extends Shape {
-    private double radius;
+    protected double radius = 1.0;
 
     public Circle() {
+        super();
     }
 
     public Circle(double radius) {
+        super();
         this.radius = radius;
     }
 
@@ -25,17 +27,17 @@ public class Circle extends Shape {
 
     @Override
     public double getArea() {
-        return Math.PI * this.radius * this.radius;
+        return Math.PI * radius * radius;
     }
 
     @Override
     public double getPerimeter() {
-        return this.radius * 2 * Math.PI;
+        return radius * 2 * Math.PI;
     }
 
     @Override
     public String toString() {
-        return "Circle[" + this.getColor() + this.isFilled() +
+        return "Circle[" + super.toString() +
                 "radius=" + radius +
                 ']';
     }

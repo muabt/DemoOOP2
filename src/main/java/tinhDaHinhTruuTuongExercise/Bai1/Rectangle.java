@@ -2,13 +2,15 @@ package tinhDaHinhTruuTuongExercise.Bai1;
 
 public class Rectangle extends Shape{
 
-    private double width;
-    private double length;
+    protected double width = 1.0;
+    protected double length = 1.0;
 
     public Rectangle() {
+        super();
     }
 
     public Rectangle(double width, double length) {
+        super();
         this.width = width;
         this.length = length;
     }
@@ -37,17 +39,17 @@ public class Rectangle extends Shape{
 
     @Override
     public double getArea() {
-        return this.width * this.length;
+        return width * length;
     }
 
     @Override
     public double getPerimeter() {
-        return this.width + this.length;
+        return (length + width) * 2;
     }
 
     @Override
     public String toString() {
-        return "Rectangle[" + this.getColor() + this.isFilled() +
+        return "Rectangle[" + super.toString() +
                 "width=" + width +
                 ", length=" + length +
                 ']';

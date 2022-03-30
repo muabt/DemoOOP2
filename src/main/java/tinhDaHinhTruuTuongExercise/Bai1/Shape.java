@@ -1,8 +1,8 @@
 package tinhDaHinhTruuTuongExercise.Bai1;
 
 public abstract class Shape {
-    private String color;
-    private boolean filled;
+    protected String color = "red";
+    protected boolean filled = true;
 
     public Shape() {}
 
@@ -29,6 +29,12 @@ public abstract class Shape {
 
     public abstract double getArea();
     public abstract double getPerimeter();
-    public abstract String toString();
+    @Override
+    public String toString() {
+        return "Shape[" +
+                "color='" + color + '\'' +
+                ",filled=" + filled +
+                ']';
+    }
 
 }
