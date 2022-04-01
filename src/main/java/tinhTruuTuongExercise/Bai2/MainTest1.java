@@ -2,19 +2,34 @@ package tinhTruuTuongExercise.Bai2;
 
 public class MainTest1 {
     public static void main(String[] args) {
-        HinhBinhHanh hbh = new HinhBinhHanh(3,5,6);
-        System.out.println("Chu vi hình bình hành = " + hbh.tinhChuVi());
-        System.out.println("Dien tich hình bình hành = " + hbh.tinhDienTich());
-        System.out.println("----------------------------");
-        HinhChuNhat hcn = new HinhChuNhat(4,3);
-        System.out.println("Chu vi hình chữ nhật = " + hcn.tinhChuVi());
-        System.out.println("----------------------------");
-        HinhTron htron = new HinhTron(6);
-        System.out.println("Diện tích hình tròn = " + htron.tinhTheTich());
-        System.out.println("----------------------------");
-        HinhTru htru = new HinhTru(6, 9);
-        System.out.println("Thể tích hình trụ = " + htru.tinhTheTich());
+        // Tạo hình bình hành và hình chữ nhật qua Interface HinhHoc2D
+        HinhHoc2D hinhBinhHanh = new HinhBinhHanh(4, 5, 30);
+        System.out.println(hinhBinhHanh);
+        System.out.printf("Chu vi %.2f cm, diện tích %.2f cm2 \n",hinhBinhHanh.tinhChuVi(), hinhBinhHanh.tinhDienTich());
+        System.out.println("----------------------");
 
+        HinhHoc2D hinhChuNhat = new HinhChuNhat(4, 5);
+        System.out.println(hinhChuNhat);
+        System.out.printf("Chu vi %.2f cm, diện tích %.2f cm2 \n",hinhChuNhat.tinhChuVi(), hinhChuNhat.tinhDienTich());
+        System.out.println("----------------------");
+
+        // Tạo hình tròn
+        HinhTron hinhTron = new HinhTron(10);
+        System.out.println(hinhTron);
+        System.out.printf("Chu vi %.2f cm, diện tích %.2f cm2 \n", hinhTron.tinhChuVi(), hinhTron.tinhDienTich());
+        System.out.println("----------------------");
+
+        // Hình trụ
+        HinhTru hinhTru1 = new HinhTru(4, 5);
+        System.out.println("Hình trụ 1: \n" + hinhTru1);
+        System.out.printf("Thể tích %.2f cm3 \n", hinhTru1.tinhTheTich());
+        System.out.println("----------------------");
+
+
+        HinhTru hinhTru2 = new HinhTru(5, hinhTron);
+        System.out.println("Hình trụ 2: \n" + hinhTru2);
+        System.out.printf("Thể tích %.2f cm3 \n", hinhTru2.tinhTheTich());
+        System.out.println("----------------------");
 
 
     }

@@ -1,37 +1,57 @@
 package tinhTruuTuongExercise.Bai2;
 
-public class HinhBinhHanh implements HinhHoc2D{
+public class HinhBinhHanh implements HinhHoc2D {
 
     protected double canhDay;
     protected double canhBen;
-    protected double chieuCao;
+    protected double goc;
 
-    public HinhBinhHanh(double canhDay, double canhBen) {
+    public HinhBinhHanh(double canhDay, double canhBen, double goc) {
         this.canhDay = canhDay;
         this.canhBen = canhBen;
-    }
-    public HinhBinhHanh(double canhDay, double canhBen, double chieuCao) {
-        this.canhDay = canhDay;
-        this.canhBen = canhBen;
-        this.chieuCao = chieuCao;
-    }
-
-    public double getCanhBen() {
-        return canhBen;
+        this.goc = goc;
     }
 
     public double getCanhDay() {
         return canhDay;
     }
 
-    public double getChieuCao() {
-        return chieuCao;
+    public void setCanhDay(double canhDay) {
+        this.canhDay = canhDay;
     }
 
-    public double tinhChuVi(){
-        return 2*(canhBen + canhDay);
+    public double getCanhBen() {
+        return canhBen;
     }
-    public double tinhDienTich(){
-        return chieuCao*canhDay;
+
+    public void setCanhBen(double canhBen) {
+        this.canhBen = canhBen;
+    }
+
+    public double getGoc() {
+        return goc;
+    }
+
+    public void setGoc(double goc) {
+        this.goc = goc;
+    }
+
+    @Override
+    public double tinhChuVi() {
+        return (canhBen + canhDay) * 2;
+    }
+
+    @Override
+    public double tinhDienTich() {
+        return canhBen * Math.sin(Math.toRadians(goc)) * canhDay;
+    }
+
+    @Override
+    public String toString() {
+        return "HinhBinhHanh[" +
+                "canhDay=" + canhDay +
+                ", canhBen=" + canhBen +
+                ", goc=" + goc +
+                ']';
     }
 }
