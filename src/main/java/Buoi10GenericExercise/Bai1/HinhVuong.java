@@ -1,12 +1,16 @@
 package Buoi10GenericExercise.Bai1;
 
-public class HinhVuong implements IHinhHoc{
-    private double canh;
+public class HinhVuong implements IHinhHoc {
+    // Mặc định cạnh bằng 1.0
+    private double canh = 1.0;
 
     public HinhVuong() {
     }
 
     public HinhVuong(double canh) {
+        if (canh <= 0) {
+            throw new IllegalArgumentException("Canh phai duong!");
+        }
         this.canh = canh;
     }
 
@@ -15,19 +19,24 @@ public class HinhVuong implements IHinhHoc{
     }
 
     public void setCanh(double canh) {
+        if (canh <= 0) {
+            throw new IllegalArgumentException("Canh phai duong!");
+        }
         this.canh = canh;
     }
 
     @Override
+    public double tinhChuVi() {
+        return canh * 4;
+    }
+
+    @Override
+    public double tinhDienTich() {
+        return canh * canh;
+    }
+
+    @Override
     public String toString() {
-        return " HinhVuong[" +
-                "canh =" + canh +
-                ']';
-    }
-    public double tinhChuVi(){
-        return canh*4;
-    }
-    public double tinhDienTich(){
-        return canh*canh;
+        return "HinhVuong[" + "canh=" + canh + ']';
     }
 }

@@ -1,4 +1,8 @@
 package Buoi10GenericExercise.Bai2;
 
-public class ITinhToan {
+public interface ITinhToan <T>{
+    public T cong(T...args);
+    public T tru(T...args);
+    public T nhan(T...args);
+    public T chia(T...args);
 }

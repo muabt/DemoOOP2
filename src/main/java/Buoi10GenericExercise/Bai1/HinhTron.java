@@ -1,33 +1,46 @@
 package Buoi10GenericExercise.Bai1;
 
-public class HinhTron {
-    private int radius;
+public class HinhTron implements IHinhHoc {
+    // Mặc định bán kính bằng 1.0
+    public double r = 1.0;
 
     public HinhTron() {
     }
 
-    public HinhTron(int radius) {
-        this.radius = radius;
+    public HinhTron(double r) {
+        if (r <= 0) {
+            throw new IllegalArgumentException("Ban kinh phai duong!");
+        }
+        this.r = r;
     }
 
-    public int getRadius() {
-        return radius;
+    public double getR() {
+        return r;
     }
 
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
-    public double tinhChuVi(){
-        return 2*Math.PI*radius;
-    }
-    public double tinhDienTich(){
-        return radius*Math.PI*radius;
+    public void setR(double r) {
+        if (r <= 0) {
+            throw new IllegalArgumentException("Ban kinh phai duong!");
+        }
+        this.r = r;
     }
 
     @Override
     public String toString() {
-        return " HinhTron[" +
-                "radius=" + radius +
+        return "HinhTron[" +
+                "r=" + r +
                 ']';
+    }
+
+    @Override
+    public double tinhChuVi() {
+        double cv = Math.PI * 2 * r;
+        return cv;
+    }
+
+    @Override
+    public double tinhDienTich() {
+        double dt = Math.PI * r * r;
+        return dt;
     }
 }
