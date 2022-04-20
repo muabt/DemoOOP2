@@ -1,46 +1,41 @@
 package Buoi11.Collection.Exercise;
 
 public class Diem {
-    private String maSV, maMH;
-    private int diem;
+    private String maSinhVien;
+    private String maMonHoc;
+    private int diemSo;
 
     public Diem() {
     }
 
-    public Diem(String maSV, String maMH, int diem) {
-        this.maSV = maSV;
-        this.maMH = maMH;
-        this.diem = diem;
+    public Diem(String maSinhVien, String maMonHoc, int diemSo) {
+        this.maSinhVien = maSinhVien;
+        this.maMonHoc = maMonHoc;
+        this.diemSo = diemSo;
     }
 
-    public int getDiem() {
-        return diem;
+    public String getMaSinhVien() {
+        return maSinhVien;
     }
 
-    public void setDiem(int diem) {
-        this.diem = diem;
+    public void setMaSinhVien(String maSinhVien) {
+        this.maSinhVien = maSinhVien;
     }
 
-    public String getMaSV() {
-        return maSV;
+    public String getMaMonHoc() {
+        return maMonHoc;
     }
 
-    public void setMaSV(String maSV) {
-        this.maSV = maSV;
+    public void setMaMonHoc(String maMonHoc) {
+        this.maMonHoc = maMonHoc;
     }
 
-    public String getMaMH() {
-        return maMH;
+    public int getDiemSo() {
+        return diemSo;
     }
 
-    public void setMaMH(String maMH) {
-        this.maMH = maMH;
+    public void setDiemSo(int diemSo) {
+        this.diemSo = diemSo;
     }
 
-    @Override
-    public String toString() {
-        return "Diem[" +
-                "diem=" + diem +
-                ']';
-    }
 }

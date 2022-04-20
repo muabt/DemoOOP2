@@ -1,41 +1,35 @@
 package Buoi11.Collection.Exercise;
 
-import java.util.Scanner;
-
 public class SinhVien {
-    private String maSV;
-    private String tenSV;
+    private String maSinhVien;
+    private String tenSinhVien;
     private String ngaySinh;
     private String queQuan;
 
     public SinhVien() {
     }
 
-    public SinhVien(String maSV) {
-        this.maSV = maSV;
-    }
-
-    public SinhVien(String maSV, String tenSV, String ngaySinh, String queQuan) {
-        this.maSV = maSV;
-        this.tenSV = tenSV;
+    public SinhVien(String maSinhVien, String tenSinhVien, String ngaySinh, String queQuan) {
+        this.maSinhVien = maSinhVien;
+        this.tenSinhVien = tenSinhVien;
         this.ngaySinh = ngaySinh;
         this.queQuan = queQuan;
     }
 
-    public String getMaSV() {
-        return maSV;
+    public String getMaSinhVien() {
+        return maSinhVien;
     }
 
-    public void setMaSV(String maSV) {
-        this.maSV = maSV;
+    public void setMaSinhVien(String maSinhVien) {
+        this.maSinhVien = maSinhVien;
     }
 
-    public String getTenSV() {
-        return tenSV;
+    public String getTenSinhVien() {
+        return tenSinhVien;
     }
 
-    public void setTenSV(String tenSV) {
-        this.tenSV = tenSV;
+    public void setTenSinhVien(String tenSinhVien) {
+        this.tenSinhVien = tenSinhVien;
     }
 
     public String getNgaySinh() {
@@ -57,12 +51,10 @@ public class SinhVien {
     @Override
     public String toString() {
         return "SinhVien[" +
-                "maSV='" + maSV + '\'' +
-                ", tenSV='" + tenSV + '\'' +
+                "maSinhVien='" + maSinhVien + '\'' +
+                ", tenSinhVien='" + tenSinhVien + '\'' +
                 ", ngaySinh='" + ngaySinh + '\'' +
                 ", queQuan='" + queQuan + '\'' +
                 ']';
     }
-
-
 }
