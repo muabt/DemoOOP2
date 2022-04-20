@@ -46,13 +46,34 @@ public class Main {
                 array[i] = str.charAt(i);
                 if (array[i] == 'a' || array[i] == 'A')
                     count++;
-                return count;
+
             }
+            return count;
         };
             System.out.println("Số từ chứ kí từ a và A là: " + soTuA.operator("Anh ơi anh ở lại anh nhé!"));
 
-            //4. Đếm số kí tự được sử dụng trong chuỗi
+        //4. Đếm số kí tự được sử dụng trong chuỗi
+            XuLyChuoi soTuXuatHien =(str) -> {
+            int count [] = new int[256];
+            int len = str.length();
+            for (int i=0; i<len; i++)
+                count[str.charAt(i)]++;
+            char array[] = new char[str.length()];
+            for (int i = 0; i < len; i++) {
+                array[i] = str.charAt(i);
+                int flag = 0;
+                for (int j = 0; j <= i; j++) {
+                    if (str.charAt(i) == array[j])
+                        flag++;
+                }
+                if (flag == 1)
 
+                    System.out.println("Số lần xuất hiện của " + str.charAt(i)
+                            + " trong chuỗi:" + count[str.charAt(i)]);
+            }
+                return 0;
+            };
+        System.out.println("So tu la " + soTuXuatHien.operator("hello"));
 
     }
 }
