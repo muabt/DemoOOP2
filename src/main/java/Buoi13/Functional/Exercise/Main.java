@@ -10,10 +10,11 @@ public class Main {
         return fn.apply(lstStudent);
     }
 
-    public static void inString(Predicate<Student> predicate, Student student){
-        if (predicate.test(student)){
-            System.out.println(student);
-        }
+    public static void inString(Predicate<Student> predicate, Student students) {
+            if (predicate.test(students)) {
+                System.out.println(students);
+            }
+
     }
     public static void main(String[] args) {
         //1. In ra tuổi trung bình của các sinh viên trong danh sách.
