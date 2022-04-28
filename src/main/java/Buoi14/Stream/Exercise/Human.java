@@ -7,17 +7,12 @@ public class Human implements Comparable<Human> {
     private String city;
     private int gender;
     private int age;
-    private double salary;
+    private int salary;
 
     public Human() {
     }
 
-    public Human(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public Human(int id, String firstName, String lastName, String city, String gender, int age, double salary) {
+    public Human(int id, String firstName, String lastName, String city, int gender, int age, int salary) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -75,29 +70,34 @@ public class Human implements Comparable<Human> {
         this.age = age;
     }
 
-    public double getSalary() {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
     @Override
     public String toString() {
-        return "Human[" +
+        String strGender;
+        if (gender == 1) strGender = "Nam";
+        else strGender = "Nữ";
+
+        return "Human{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", fullName='" + lastName + " " + firstName + '\'' +
                 ", city='" + city + '\'' +
-                ", gender='" + gender + '\'' +
+                ", gender=" + strGender +
                 ", age=" + age +
                 ", salary=" + salary +
-                ']';
-    }
-    @Override
-    public int compareTo(Human human){
-        return (this.firstName + this.lastName).compareTo(human.firstName+human.lastName);
+                '}';
     }
 
+    @Override
+    public int compareTo(Human o) {
+        String thisFullName = lastName + " " + firstName;
+        String oFullName = o.lastName + " " + o.firstName;
+        return thisFullName.compareTo(oFullName);
+    }
 }
